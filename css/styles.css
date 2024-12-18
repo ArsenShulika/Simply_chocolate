@@ -7,6 +7,41 @@ ol {
     text-decoration: none;
 } */
 
+
+/**************************** COMMON SYTLES */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
 .link {
     text-decoration: none;
 }
@@ -25,19 +60,53 @@ ol {
     color: #111;
 }
 
-.title span {
+.accent-color {
     color: #fd9222;
 }
 
-button {
-    cursor: pointer;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
+.container {
+    width: 1168px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
+
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/********************** /COMMON STYLES */
 
 /******************* MENU */
+
+
+.main-nav {
+    display: flex;
+    width: 980px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
 
 .logo {
     font-weight: 700;
@@ -48,12 +117,15 @@ body {
 }
 
 .menu-link {
+    display: block;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14286;
     letter-spacing: -0.02em;
     color: #111111;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .menu-link:hover,
@@ -126,11 +198,38 @@ body {
 
 /******************** BENEFITS  */
 
+.benefits {
+    background-color: #1e1823;
+    margin-top: 72px;
+    margin-bottom: 50px;
+}
+
+.benefits-container {
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+.benefits-list {
+    display: flex;
+    column-gap: 88px;
+}
+
+.benefits-list-item {
+    width: calc((100% - 2 * 88px) / 3);
+}
+
+.benefits-list-img {
+    margin-bottom: 22px;
+}
+
+
+
 .benefits-subtitle {
 
     font-weight: 600;
     font-size: 18px;
     color: #fff;
+    margin-bottom: 22px;
 }
 
 .benefits-text {
@@ -142,6 +241,12 @@ body {
 
 /******************** INGREDIENTS  */
 
+.ingredients-section-title {
+    width: 412px;
+    margin: 0 auto 28px;
+}
+
+
 .ingredients-text {
     font-weight: 400;
     font-size: 14px;
@@ -149,68 +254,87 @@ body {
     letter-spacing: -0.02em;
     text-align: center;
     color: #111;
+    width: 486px;
+    margin: 0 auto 50px;
 }
 
-.ingredients-chocolate-item {
+.ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+}
+
+.ingredients-list-item {
+    width: calc((100% - 57px) / 4);
+    padding: 32px 28px;
     border-radius: 15px;
-    width: 270px;
-    height: 270px;
-    background: #fd9222;
+    border: 1px solid #fd9222;
 }
 
-.ingredients-chocolate-subtitle {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.28571;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+.ingredients-list-item:nth-child(4n+1) {
     color: #fff;
+    background-color: #fd9222;
 }
 
-.ingredients-milk-subtitle {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.28571;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+.ingredients-list-item:nth-child(even) {
     color: #111;
+    background-color: #fff;
 }
 
-.ingredients-nuts-item {
-    border-radius: 15px;
-    width: 270px;
-    height: 270px;
-    background: #1e1823;
-}
-
-.ingredients-nuts-subtitle {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.28571;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+.ingredients-list-item:nth-child(4n+3) {
     color: #fff;
+    background-color: #1e1823;
+    border-color: #1e1823;
 }
 
-.ingredients-semi-subtitle {
+
+.ingredients-subtitle {
     font-weight: 600;
     font-size: 14px;
     line-height: 1.28571;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: #111;
 }
+
+.ingredients-img {
+    margin-bottom: 36px;
+}
+
 
 /********************** HOW ITS MADE  */
+
+
+.howmade-title {
+    margin-bottom: 50px;
+}
+
+.container-howmade {
+    display: flex;
+    gap: 20px;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
 
 .howitsmade-subtitle {
     font-weight: 600;
     font-size: 18px;
     line-height: 1.33333;
     color: #111;
+    margin-bottom: 28px;
 }
 
-.howitsmade-item {
+.list-wrapper {
+    border-radius: 15px;
+    width: 516px;
+    height: 400px;
+    background: #fff;
+}
+
+.howitsmade-list-item {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.28571;
@@ -218,7 +342,45 @@ body {
     color: #111;
 }
 
+.howitsmade-list-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
 /********************** REVIEWS  */
+
+.reviews-title {
+    margin-bottom: 91px;
+}
+
+
+
+.reviews-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 50px;
+}
+
+
+
+.reviews-list-item {
+    position: relative;
+    width: calc((100% - 56px) / 3);
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 15px;
+    width: 360px;
+    height: 200px;
+    box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+    background: #fff;
+    padding: 54px 24px 24px;
+}
+
+.reviews-img {
+    position: absolute;
+    top: -43px;
+    left: 140px;
+}
 
 .reviews-subtitle {
 
@@ -227,6 +389,7 @@ body {
     line-height: 1.33333;
     text-align: center;
     color: #111;
+    margin-bottom: 24px;
 }
 
 .reviews-text {
@@ -238,19 +401,23 @@ body {
     color: rgba(17, 17, 17, 0.7);
 }
 
-.reviw-link {
+.reviwes-btn {
+    display: block;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 18px;
     color: #111;
+    background-color: transparent;
     border: 1px solid #fd9222;
     border-radius: 100px;
     padding: 14px 40px;
+    width: 222px;
     height: 50px;
+    margin: 0 auto;
 }
 
-.reviw-link:hover,
-.reviw-link:focus {
+.reviwes-btn:hover,
+.reviwes-btn:focus {
     font-weight: 600;
     font-size: 18px;
     color: #fff;
@@ -275,23 +442,67 @@ body {
 
 /********************** FOOTER  */
 
+.footer-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #1e1823;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 74px;
+}
+
+.slogan-text {
+    width: 300px;
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .footer-subtitle {
 
     font-weight: 500;
     font-size: 14px;
     line-height: 1.28571;
-    text-align: center;
+    text-align: start;
     color: #fff;
 }
 
 .contacts {
-    /* font-family: "Montserrat", sans-serif; */
     font-weight: 400;
     font-size: 14px;
     line-height: 1.28571;
     letter-spacing: -0.02em;
     text-align: center;
     color: #fff;
+}
+
+.footer-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu-link {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14286;
+    letter-spacing: -0.02em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14286;
+    letter-spacing: -0.02em;
+    color: #fff;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .footer-btn {
