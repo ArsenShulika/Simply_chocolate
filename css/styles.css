@@ -9,6 +9,11 @@ ol {
 
 
 /**************************** COMMON SYTLES */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     background-color: #fafafa;
@@ -95,6 +100,11 @@ button {
 
 /******************* MENU */
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .main-nav {
     display: flex;
@@ -109,12 +119,19 @@ button {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.11111;
     letter-spacing: -0.03em;
     color: #111111;
 }
+
+.logo-icon {
+    margin-left: 4px;
+}
+
 
 .menu-link {
     display: block;
@@ -126,6 +143,7 @@ button {
     color: #111111;
     padding-top: 32px;
     padding-bottom: 32px;
+    transition: all 500ms ease;
 }
 
 .menu-link:hover,
@@ -133,7 +151,37 @@ button {
     color: #FD9222;
 }
 
+.social-list {
+    display: flex;
+    column-gap: 18px;
+}
+
+.social-list-link {
+    display: block;
+    line-height: 0;
+    stroke: #111111;
+    fill: none;
+    transition: all 500ms ease;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    stroke: #fd9222;
+}
+
+
+
 /************************ HERO */
+
+.bg-hero {
+
+    width: 1136px;
+    background-color: #1e1823;
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url("../img/hero/hero_bg.jpg");
+    block-size: cover;
+    padding: 381px 40px 40px;
+    border-radius: 16px;
+}
 
 .hero-title {
 
@@ -142,9 +190,12 @@ button {
     line-height: 1.21429;
     letter-spacing: -0.03em;
     color: #fff;
+    margin-bottom: 32px;
+    max-width: 484px;
 }
 
 .hero-btn {
+    display: inline-block;
     font-weight: 600;
     font-size: 14px;
     color: #fff;
@@ -152,7 +203,9 @@ button {
     padding: 14px 40px;
     height: 45px;
     background: #fd9222;
+    margin-right: 14px;
     border-color: transparent;
+    transition: all 250ms ease;
 }
 
 .hero-btn:hover,
@@ -168,6 +221,7 @@ button {
 }
 
 .hero-link {
+    display: inline-block;
     font-weight: 600;
     font-size: 14px;
     color: #fff;
@@ -175,10 +229,12 @@ button {
     border-radius: 100px;
     padding: 14px 40px;
     height: 45px;
+    transition: all 250ms ease;
 }
 
 .hero-link:hover,
 .hero-link:focus {
+    background-color: #FFFFFF;
     font-weight: 600;
     font-size: 14px;
     color: #fd9222;
@@ -186,7 +242,10 @@ button {
     border-radius: 100px;
     padding: 14px 40px;
     height: 45px;
+
 }
+
+
 
 .hero-link_down {
     font-weight: 500;
@@ -194,6 +253,55 @@ button {
     line-height: 1.28571;
     letter-spacing: -0.03em;
     color: #fff;
+    transition: all 250ms ease;
+}
+
+.container-scroll:hover .hero-link_down,
+.container-scroll:focus .hero-link_down {
+    color: #FD9222;
+}
+
+.arrow-container {
+    display: block;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.container-scroll:hover .arrow-container,
+.container-scroll:focus .arrow-container {
+    transform: scale(0.75);
+    background-color: #FD9222;
+}
+
+.arrow-icon {
+    fill: #FD9222;
+    transition: all 250ms ease;
+}
+
+.container-scroll:hover .arrow-icon,
+.container-scroll:focus .arrow-icon {
+    fill: #FFFFFF;
+    transform: scale(0.75);
+}
+
+.container-wrapper-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-scroll {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
 }
 
 /******************** BENEFITS  */
@@ -215,14 +323,29 @@ button {
 }
 
 .benefits-list-item {
+    position: relative;
     width: calc((100% - 2 * 88px) / 3);
+
 }
 
 .benefits-list-img {
     margin-bottom: 22px;
 }
 
+.benefit-icon-container {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 365px;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+}
 
+.benefit-icon {
+    fill: #FD9222;
+}
 
 .benefits-subtitle {
 
@@ -237,6 +360,19 @@ button {
     font-size: 14px;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.benefits-list-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    top: 25%;
+    right: -18px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+
+
 }
 
 /******************** INGREDIENTS  */
@@ -258,6 +394,7 @@ button {
     margin: 0 auto 50px;
 }
 
+
 .ingredients-list {
     display: flex;
     flex-wrap: wrap;
@@ -265,11 +402,16 @@ button {
 }
 
 .ingredients-list-item {
+    position: relative;
     width: calc((100% - 57px) / 4);
     padding: 32px 28px;
     border-radius: 15px;
     border: 1px solid #fd9222;
+    overflow: hidden;
+
 }
+
+
 
 .ingredients-list-item:nth-child(4n+1) {
     color: #fff;
@@ -298,6 +440,74 @@ button {
 
 .ingredients-img {
     margin-bottom: 36px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: all 500ms linear;
+}
+
+.ingredients-list-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.overlay-title {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.overlay-container {
+    display: flex;
+    column-gap: 6px;
+    margin-bottom: 14px;
+}
+
+.first-span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #fff;
+    border-radius: 35px;
+    padding: 6px 16px;
+    min-width: 30px;
+    height: 24px;
+    background: #fd9222;
+}
+
+.second-span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #111;
+    border: 1px solid #fd9222;
+    border-radius: 35px;
+    padding: 6px 16px;
+    min-width: 40px;
+    height: 24px;
+    background: #fafafa;
+}
+
+.overlay-text {
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: #111;
 }
 
 
@@ -335,11 +545,16 @@ button {
 }
 
 .howitsmade-list-item {
+    width: 425px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.28571;
     letter-spacing: -0.02em;
     color: #111;
+}
+
+.howitsmade-list {
+    padding-left: 20px;
 }
 
 .howitsmade-list-item:not(:last-child) {
@@ -414,6 +629,7 @@ button {
     width: 222px;
     height: 50px;
     margin: 0 auto;
+    transition: all 250ms ease;
 }
 
 .reviwes-btn:hover,
@@ -451,7 +667,7 @@ button {
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 74px;
+    margin-bottom: 50px;
 }
 
 .slogan-text {
@@ -486,6 +702,12 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-menu-item {
+    padding-top: 42px;
+    padding-bottom: 42px;
 }
 
 .footer-menu-link {
@@ -501,8 +723,12 @@ button {
     line-height: 1.14286;
     letter-spacing: -0.02em;
     color: #fff;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    transition: all 250ms ease;
+}
+
+.footer-menu-link:hover,
+.foorer-menu-link:focus {
+    color: #fd9222;
 }
 
 .footer-btn {
@@ -514,6 +740,7 @@ button {
     height: 45px;
     background: #fd9222;
     border-color: transparent;
+    transition: all 250ms ease;
 }
 
 .footer-btn:hover,
