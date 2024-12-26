@@ -29,7 +29,7 @@
               height="24"
               aria-label="somply chocolate logo"
             >
-              <use href="./icons/symbol-defs.svg#icon-chocolate"></use></svg
+              <use href="./icons/sprite.svg#icon-chocolate"></use></svg
           ></a>
           <ul class="menu list">
             <li class="menu-item">
@@ -52,7 +52,7 @@
                 height="24"
                 aria-label="instagram-icon"
               >
-                <use href="./icons/symbol-defs.svg#icon-instagram"></use>
+                <use href="./icons/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -64,7 +64,7 @@
                 height="24"
                 aria-label="twitter-icon"
               >
-                <use href="./icons/symbol-defs.svg#icon-twitter"></use>
+                <use href="./icons/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -88,7 +88,7 @@
             <a class="hero-link_down link" href="#benefits">scroll down</a>
             <div class="arrow-container">
               <svg class="arrow-icon" width="22" height="22">
-                <use href="./icons/symbol-defs.svg#icon-arrow"></use>
+                <use href="./icons/sprite.svg#icon-scroll"></use>
               </svg>
             </div>
           </div>
@@ -102,7 +102,7 @@
             <li class="benefits-list-item">
               <div class="benefit-icon-container">
                 <svg class="benefit-icon" width="32" height="32">
-                  <use href="./icons/symbol-defs.svg#icon-half_chocolate"></use>
+                  <use href="./icons/sprite.svg#icon-chocolate-bar"></use>
                 </svg>
               </div>
               <h3 class="benefits-subtitle">Unsurpassed taste</h3>
@@ -116,7 +116,7 @@
             <li class="benefits-list-item">
               <div class="benefit-icon-container">
                 <svg class="benefit-icon" width="32" height="32">
-                  <use href="./icons/symbol-defs.svg#icon-Coin"></use>
+                  <use href="./icons/sprite.svg#icon-coin"></use>
                 </svg>
               </div>
               <h3 class="benefits-subtitle">Affordable price</h3>
@@ -131,7 +131,7 @@
             <li class="benefits-list-item">
               <div class="benefit-icon-container">
                 <svg class="benefit-icon" width="32" height="32">
-                  <use href="./icons/symbol-defs.svg#icon-spoon"></use>
+                  <use href="./icons/sprite.svg#icon-spoon"></use>
                 </svg>
               </div>
               <h3 class="benefits-subtitle">Own production</h3>
@@ -399,5 +399,128 @@
         </div>
       </div>
     </footer>
+    <!------------------------ FOOTER ---------------------->
+    <!---------------------- BACKDROP ---------------------->
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-close-btn">
+          <svg
+            class="modal-close-btn-icon"
+            width="28"
+            height="28"
+            aria-label="modal close icon btn"
+          >
+            <use href="./icons/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="review-form-description">
+          leave a review about <span class="accent-color">our chocolate</span>
+        </p>
+        <form class="review-form">
+          <div class="review-form-field-wrapper">
+            <label class="review-form-input-label" for="user-name">Name</label>
+            <div class="review-form-input-wrapper">
+              <input
+                class="review-form-input"
+                id="user-name"
+                name="user-name"
+                type="text"
+                pattern="[A-Za-z]{2,}"
+                title="Arsen"
+                required
+              />
+              <svg
+                class="review-form-input-icon"
+                width="24"
+                height="24"
+                aria-label="icon user"
+              >
+                <use href="./icons/sprite.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="review-form-field-wrapper">
+            <label class="review-form-input-label" for="user-email"
+              >Email</label
+            >
+            <div class="review-form-input-wrapper">
+              <input
+                class="review-form-input"
+                id="user-email"
+                name="user-email"
+                type="email"
+                required
+              /><svg
+                class="review-form-input-icon"
+                width="24"
+                height="24"
+                aria-label="icon user"
+              >
+                <use href="./icons/sprite.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="review-form-field-wrapper">
+            <label class="review-form-input-label" for="user-phone"
+              >Phone number</label
+            >
+            <div class="review-form-input-wrapper">
+              <input
+                class="review-form-input"
+                id="user-phone"
+                name="user-phone"
+                type="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                title="xxx-xxx-xxxx"
+                required
+              /><svg
+                class="review-form-input-icon"
+                width="24"
+                height="24"
+                aria-label="icon user"
+              >
+                <use href="./icons/sprite.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="review-form-field-wrapper">
+            <label class="review-form-input-label" for="user-comment"
+              >Comment</label
+            ><textarea
+              class="review-form-textarea"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Enter text"
+              required
+            ></textarea>
+          </div>
+          <div class="review-form-field-wrapper">
+            <input
+              class="review-form-checkbox visually-hidden"
+              id="user-privacy-policy"
+              name="user-privacy-policy"
+              type="checkbox"
+              value="true"
+              required
+            />
+            <label class="review-form-checkbox-label" for="user-privacy-policy">
+              <span class="review-form-own-checkbox">
+                <svg
+                  class="review-form-own-checkbox-icon"
+                  width="10"
+                  height="9"
+                  aria-label="checkmark icon"
+                >
+                  <use href="./icons/sprite.svg#icon-checkmark"></use></svg
+              ></span>
+              I accept the terms and conditions of the
+              <a class="accent-color" href="">Privacy Policy</a></label
+            >
+          </div>
+          <button class="review-form-submit-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <!---------------------- BACKDROP ---------------------->
   </body>
 </html>
