@@ -174,12 +174,13 @@ button {
 /************************ HERO */
 
 .bg-hero {
-
     width: 1136px;
     background-color: #1e1823;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url("../img/hero/hero_bg.jpg");
     block-size: cover;
     padding: 381px 40px 40px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 16px;
 }
 
